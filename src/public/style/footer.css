@@ -1,0 +1,106 @@
+.container-footer {
+  background-color: #FFF;
+  margin-top: 80px;
+  padding: 60px;
+}
+
+@media (max-width: 768px) {
+  .container-footer {
+    padding: 60px 10px;
+  }
+}
+
+footer > div:first-of-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 500px) {
+  footer > div:first-of-type div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+footer > div:first-of-type img {
+  height: 50px;
+}
+
+footer .sec-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  footer .sec-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+footer .sec-footer .sec-footer-right {
+  text-align: right;
+}
+
+footer .sec-footer .sec-footer-right h6 {
+  font-weight: 900;
+}
+
+footer .sec-footer .sec-footer-right a {
+  color: blue;
+  margin-left: 10px;
+}
+
+@media (max-width: 500px) {
+  footer .sec-footer .sec-footer-right a {
+    font-size: 13px;
+  }
+}
+
+footer .sec-footer .sec-footer-left h6 {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  footer .sec-footer .sec-footer-left h6 {
+    margin-top: 12px;
+  }
+}
+
+footer .sec-footer .sec-footer-left > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .sec-footer .sec-footer-left > div > div {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-right: 10px;
+}
+/*# sourceMappingURL=footer.css.map */

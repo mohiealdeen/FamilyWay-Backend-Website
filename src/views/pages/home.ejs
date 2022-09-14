@@ -1,0 +1,149 @@
+<html >
+  <%- include("../components/head.ejs") %>
+  <body>
+    <div class="content-of-header">
+      <div class="uk-container uk-container-large"><%- include("../components/nav.ejs") %></div>
+      <div class="content-center">
+        <h1>حلي بيتك بمنتجات فاميلي واي</h1>
+        <p>اشتري مقاضيك أون لاين من خلال تطبيق فاميلي واي وستصلك لبيتك طازجة وقتما تشاء</p>
+        <a class="uk-button uk-button-default" href="./"><span uk-icon="download"></span> حمل التطبيق</a>
+      </div>
+    </div>
+    <div class="section-features">
+      <div class="uk-container uk-container-large">
+        <header>
+          <h3 class="uk-heading-line uk-text-center"><span>مميزات التطبيق</span></h3>
+          <p>للحصول على متعة تسوق خاصة و شيقة وفرنا لكم أسهل طريقة لشراء المقاضي اونلاين</p>
+        </header>
+        <section>
+          <div
+            class="container-services uk-grid-column-small uk-grid-row-small uk-child-width-1-1@xs uk-child-width-1-2@s uk-child-width-1-3@m uk-text-center"
+            uk-grid
+            uk-height-match="target: > div > .uk-card"
+            uk-grid
+            uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 300; repeat: false"
+          >
+            <div>
+              <div class="uk-card uk-card-default uk-card-body">
+                <%- include("../svg/car.ejs") %>
+                <h5>توصيل لأي مكان</h5>
+                <p>
+                  اذا كان عنوانك ضمن المناطق المدعومة كل ما عليك فعله هو اضافة تفاصيل عنوانك لتصلك الطلبية بأعلى جودة.
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="uk-card uk-card-default uk-card-body">
+                <%- include("../svg/wallet.ejs") %>
+                <h5>دفع بأكثر من طريقة</h5>
+                <p>من خلال فاميلي واي يمكنك الدفع كاش عند الاستلام او اونلاين خلال عملية الشراء.</p>
+              </div>
+            </div>
+            <div>
+              <div class="uk-card uk-card-default uk-card-body">
+                <%- include("../svg/product.ejs") %>
+                <h5>جميع انواع المقاضي</h5>
+                <p>فاميلي واي يوفر لك قائمة متنوعة و كاملة من المقاضي مصنفة و مرتبة بشكل يسهل عليك عملية التسوق.</p>
+              </div>
+            </div>
+            <div>
+              <div class="uk-card uk-card-default uk-card-body">
+                <%- include("../svg/customer.ejs") %>
+                <h5>دعم فني 24/7</h5>
+                <p>
+                  فريق الدعم الفني لدىنا هم أصدقائكم يقدمون كل الدعم و المسااعدة اللازمة من أجل تقديم افضل خدمة ممكنة.
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="uk-card uk-card-default uk-card-body">
+                <%- include("../svg/market.ejs") %>
+                <h5>دعم المتاجر</h5>
+                <p>فاميلي واي يقدم لك مجموعة من المتاجر الكبيرة ومتوسطة الحجم لتلائم جميع متطلبات المستخدمين..</p>
+              </div>
+            </div>
+            <div>
+              <div class="uk-card uk-card-default uk-card-body">
+                <%- include("../svg/calender.ejs") %>
+                <h5>جدولة الطلبيات</h5>
+                <p>يمكنك تجهيز سلتك الشرائية الان و طلبها في الوقت الذي يناسبك من خلال اختيار موعد توصيل مجدول.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="center-mobile">
+      <div class="uk-container uk-container-large">
+        <section>
+          <div class="container-mobile" ><%- include("../svg/mobile.ejs") %></div>
+          <div class="container-content">
+            <h4>أفضل وسيلة تسوق مقاضي عبر الانترنت</h4>
+            <p class="uk-text-meta">
+              خدمة فاميلي واي للتوصيل هي نتاج جهد شبابي سعودي يسعى لتطوير منظومة شراء وتوصيل المقاضي للمنازل من خلال
+              كادر مدرَّب على الشراء واختيار أفضل الخضار والفواكه. وتتميز فاميلي واي بسرعة التوصيل وجودة الخدمة المقدمة.
+            </p>
+            <a class="uk-button uk-button-default" href="./"><span uk-icon="download"></span> حمل التطبيق</a>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="center-mobile center-map">
+      <div class="uk-container uk-container-large">
+        <section>
+          <div class="container-mobile"><%- include("../svg/map.ejs") %></div>
+          <div class="container-content">
+            <h4>قريبا في جميع مناطق المملكة</h4>
+            <p class="uk-text-meta">
+              فاميلي واي كأول خدمة تسوق و توصيل مقاضي للمنازل في المملكة يتطلع لتغطية كافة مناظق المملكة لأنكم تستحقون
+              الأفضل. توسيع مناطق التغطية يحتاج منا المزيد من الوقت والجهد لضمان اعلى مستوى جودة للخدمة. يمكن تصفح كافة
+              المناطق المدعومة و اضافة رقم جوالك لاعلامك في كل مرة نقوم بالتوسع الى مناطق جديدة.
+            </p>
+            <a class="uk-button uk-button-default regular-button" href="./"
+              ><span uk-icon="download"></span> حمل التطبيق</a
+            >
+            <button
+              class="uk-button uk-button-default uk-margin-small-right primButton"
+              type="button"
+              uk-toggle="target: #modal-example"
+            >
+              المناطق المدعومه
+            </button>
+            <!-- This is the modal -->
+            <div id="modal-example" uk-modal>
+              <div class="uk-modal-dialog uk-modal-body">
+                <h2 class="uk-modal-title">المناطق المدعومه</h2>
+                <ul class="uk-list uk-list-striped">
+                  <% cities.forEach(city => { %>
+                    <li><%=city %> </li>
+                  <% }) %>
+                </ul>
+                <p class="uk-text-right">
+                  <button class="uk-button uk-button-default uk-modal-close" type="button" onclick="caller()">اغلاق</button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="app-ui">
+      <div class="uk-container uk-container-large">
+        <header>
+          <h3 class="uk-heading-line uk-text-center"><span>واجهات التطبيق</span></h3>
+        </header>
+        <section>
+          <div uk-grid class="uk-grid-column-small uk-grid-row-small uk-child-width-1-1@xs uk-child-width-1-2@s uk-child-width-1-4@m uk-text-center">
+            <div><%- include("../svg/1.ejs") %></div>
+            <div><%- include("../svg/2.ejs") %></div>
+            <div><%- include("../svg/3.ejs") %></div>
+            <div><%- include("../svg/mobile1.ejs") %></div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <%- include("../components/footer") %>
+
+  </body>
+  <%- include("../components/libs.ejs") %>
+</html>

@@ -1,0 +1,20 @@
+<html>
+  <%- include("../components/head.ejs") %>
+  <body>
+    <div class="uk-container uk-container-large"><%- include("../components/nav.ejs") %></div>
+
+    <div class="uk-container uk-container-large">
+      <article class="article-politics">
+        <div class="container-header-politics">
+          <h2><%=title %></h2>
+        </div>
+        <hr class="uk-divider-icon" />
+        <p class="uk-text-right"><%=content %></p>
+      </article>
+    </div>
+
+    <%- include("../components/footer") %>
+    <script></script>
+  </body>
+  <%- include("../components/libs.ejs") %>
+</html>

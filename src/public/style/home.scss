@@ -1,0 +1,452 @@
+* {
+  font-family: 'Tajawal', "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Neue" !important
+}
+
+html {
+  background-color: #F5F7FF;
+}
+
+// @mixin primButton {
+//   color: #FFF;
+//   font-weight: 900;
+//   background-color: $primColor;
+//   border-radius: 50px;
+//   padding: 6px 30px;
+// }
+
+@mixin primButton($size) {
+  @if $size=="1200px" {
+    color: #FFF;
+    font-weight: 900;
+    background-color: $primColor;
+    border-radius: 50px;
+    padding: 6px 25px;
+  }
+
+  @if $size=="992px" {
+    color: #FFF;
+    font-weight: 900;
+    background-color: $primColor;
+    border-radius: 50px;
+    padding: 6px 25px;
+  }
+
+  @else if $size=="768px" {
+    color: #FFF;
+    font-weight: 900;
+    background-color: $primColor;
+    border-radius: 50px;
+    padding: 5px 20px;
+    font-size: 14px;
+  }
+
+  @else if $size=="600px" {
+    color: #FFF;
+    font-weight: 900;
+    background-color: $primColor;
+    border-radius: 50px;
+    padding: 4px 15px;
+    font-size: 13px;
+  }
+}
+
+// variables 
+$primColor: #64DD16;
+$secColor:#F85736;
+
+.loading {
+  z-index: 999999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+}
+
+.content-of-header {
+  height: 100vh;
+  background-image: url("https://familyway.sa/uploads/home.jpg");
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 70px;
+
+  .content-center {
+    text-align: center;
+    padding: 120px;
+
+
+    @media (min-width : 992px) {
+      a {
+        @include primButton("1200px")
+      }
+    }
+
+    @media (max-width : 991px) {
+      a {
+        @include primButton("992px")
+      }
+    }
+
+    @media (max-width : 768px) {
+      a {
+        @include primButton("768px")
+      }
+    }
+
+    @media (max-width : 600px) {
+      a {
+        @include primButton("600px")
+      }
+    }
+
+    span {
+      color: #FFF;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .content-center {
+      padding: 65px;
+      padding-top: 120px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .content-center {
+      padding: 40px;
+      padding-top: 120px;
+
+      h1 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .content-center {
+      padding: 20px;
+      padding-top: 120px;
+    }
+  }
+}
+
+.section-features {
+  header {
+    text-align: center;
+
+    p {
+      margin-top: 10px;
+    }
+  }
+
+  section {
+    margin-top: 50px;
+
+    .container-services {
+      h5 {
+        color: $primColor;
+        font-weight: 800;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.center-mobile {
+  background-color: #FFF;
+  margin-top: 220px;
+
+  @media (max-width: 992px) {
+    margin-top: 120px;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 50px;
+  }
+
+  section {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 65px 0px;
+
+    @media (max-width: 768px) {
+      padding: 25px 0px;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container-mobile {
+      height: 100%;
+
+      svg {
+        position: absolute;
+        left: 0px;
+        top: -150px;
+
+        @media (max-width: 992px) {
+          width: 300px;
+          top: -60px;
+        }
+
+        @media (max-width: 768px) {
+          position: static;
+        }
+      }
+
+      .map-svg {
+        position: absolute;
+        left: 0px;
+        top: -50px;
+
+        @media (max-width: 992px) {
+          width: 300px;
+          top: 0px;
+        }
+
+        @media (max-width: 768px) {
+          position: static;
+        }
+      }
+    }
+
+    .container-content {
+      width: 60%;
+      text-align: right;
+
+      @media (max-width: 768px) {
+        width: 95%;
+        text-align: center;
+      }
+
+      h4 {
+        font-weight: 900;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      @media (min-width : 992px) {
+        a {
+          @include primButton("1200px")
+        }
+      }
+
+      @media (max-width : 991px) {
+        a {
+          @include primButton("992px")
+        }
+      }
+
+      @media (max-width : 768px) {
+        a {
+          @include primButton("768px")
+        }
+      }
+
+      @media (max-width : 600px) {
+        a {
+          @include primButton("600px")
+        }
+      }
+
+      .regular-button {
+        background-color: transparent;
+        color: $primColor;
+      }
+
+
+      @media (min-width : 992px) {
+        .primButton {
+          @include primButton("1200px")
+        }
+      }
+
+      @media (max-width : 991px) {
+        .primButton {
+          @include primButton("992px")
+        }
+      }
+
+      @media (max-width : 768px) {
+        .primButton {
+          @include primButton("768px")
+        }
+      }
+
+      @media (max-width : 600px) {
+        .primButton {
+          @include primButton("600px")
+        }
+      }
+
+    }
+  }
+}
+
+.center-map {
+  margin-top: 280px;
+
+  @media (max-width: 992px) {
+    margin-top: 120px;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 50px;
+  }
+
+}
+
+#modal-example {
+  text-align: right;
+}
+
+.app-ui {
+  margin-top: 110px;
+
+  .container-mobiles {
+    text-align: center;
+    margin-top: 100px;
+
+    svg {
+      transform: scale(1.25)
+    }
+  }
+}
+
+.city-cover {
+  height: 400px;
+  position: relative;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -50%;
+    margin-top: -50%;
+    z-index: 999999;
+  }
+}
+
+.content-cities {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.uk-article {
+  width: 60%;
+  background-color: #FFF;
+  box-shadow: 0 5px 15px #00000014;
+  padding: 20;
+  margin: -100px auto 60px auto;
+  text-align: right;
+
+  @media (max-width: 992px) {
+    width: 80%;
+  }
+
+  @media (max-width: 768px) {
+    width: auto
+  }
+
+  @media (max-width: 500px) {
+    width: auto
+  }
+
+  >div:not(.container-data-form) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0px;
+
+    svg {
+      height: 150px;
+
+      @media (max-width: 500px) {
+        height: 100px;
+      }
+    }
+  }
+
+  p {
+    @media (max-width: 500px) {
+      font-size: 13px;
+    }
+  }
+
+  form {
+    .container-input {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      input::-webkit-input-placeholder {
+        font-size: 13
+      }
+    }
+  }
+
+  .container-data-form {
+    div {
+      display: flex;
+      margin: 10px 0px;
+
+      p {
+        margin: 0;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.uk-notification-message {
+  text-align: right
+}
+
+.article-politics {
+  .container-header-politics {
+    background: #64DD16;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+
+    h2 {
+      color: #FFF;
+      font-weight: 900;
+      @media (max-width: 500px) {
+        font-size: 21px;
+      }
+    }
+
+  }
+
+  p {
+    @media (max-width: 500px) {
+      font-size: 13px;
+    }
+  }
+}

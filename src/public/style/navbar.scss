@@ -1,0 +1,39 @@
+nav {
+  
+  .uk-navbar-right {
+    align-items: center;
+    img {
+      height: 100px;
+      margin-bottom: -16px;
+    }
+  }
+
+  .uk-navbar-left {
+    a {
+      color: #212121;
+      font-weight: 900;
+    }
+
+    .nested-li a {
+      font-weight: 400;
+      text-align: right;
+      cursor: none;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .uk-navbar-right {
+    img {
+      height: 70px !important;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .uk-navbar-right {
+    img {
+      height: 55px !important;
+    }
+  }
+}

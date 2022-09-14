@@ -1,0 +1,42 @@
+<div class="container-footer">
+  <div class="uk-container uk-container-large">
+    <footer>
+      <div>
+        <div>
+          <h3 class="uk-heading-line uk-text-center"><span>حمّل التطبيق الآن</span></h3>
+          <img data-src="public/imgs/apple.png" width="" height="" alt="تحميل فاميلي واي ابل" uk-img />
+          <img data-src="public/imgs/google.png" width="" height="" alt="تحميل فاميلي واي جوجل" uk-img />
+        </div>
+      </div>
+      <hr class="uk-divider-icon" />
+      <div class="sec-footer">
+        <div class="sec-footer-right">
+          <h6>جميع الحقوق محفوظة لتطبيق فاميلي واي</h6>
+          <% foot.forEach(element => { %>
+          <a class="uk-link-muted" href="/<%=element.route%>"><%=element.name%></a> - <% }) %>
+        </div>
+        <div class="sec-footer-left">
+          <h6>تواصل معنا</h6>
+          <div class="container-icons">
+            <div>
+              <a target="_blank" href="https://www.facebook.com/FmailyWayMarkets/" uk-icon="icon: facebook"></a>
+            </div>
+            <div>
+              <a target="_blank" href="https://twitter.com/FamilyWayMarket" uk-icon="icon: twitter"></a>
+            </div>
+            <div>
+              <a
+                target="_blank"
+                href="http://instagram.com/_u/familywaymarket?igshid=17ubbt1xhixmu"
+                uk-icon="icon: instagram"
+              ></a>
+            </div>
+            <div>
+              <a target="_blank" href="https://wa.me/<%=mobileNumber%>/?text=مرحباً" uk-icon="icon: whatsapp"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>

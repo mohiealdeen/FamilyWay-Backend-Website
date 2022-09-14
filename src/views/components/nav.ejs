@@ -1,0 +1,50 @@
+<nav class="family-navbar uk-navbar-container uk-navbar-transparent" uk-navbar>
+  <div id="offcanvas-nav" uk-offcanvas="overlay: true; flip:true">
+    <div class="uk-offcanvas-bar">
+      <ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
+        <% items.reverse().forEach(function(entry) {%> <% if (entry.isDropdown) { %>
+        <li class="uk-parent">
+          <a href="#"><%=entry.name%></a>
+          <ul class="uk-nav-sub">
+            <% entry.children.forEach(children => { %>
+            <li><a><%=children%></a></li>
+            <% }) %>
+          </ul>
+        </li>
+        <% } %> <% if (entry.route) { %>
+        <li class="uk-active"><a href="<%=entry.route%>"><%=entry.name%></a></li>
+        <% } %> <%});%>
+      </ul>
+    </div>
+  </div>
+
+  <div class="uk-navbar-left uk-hidden@m">
+    <a class="uk-navbar-toggle" href="#" uk-toggle="target: #offcanvas-nav">
+      <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">القائمه</span>
+    </a>
+  </div>
+  <div class="uk-navbar-left uk-visible@m">
+    <ul class="uk-navbar-nav">
+      <% items.reverse().forEach(function(entry) {%> <% if (entry.isDropdown) { %>
+      <li>
+        <a href="#"><%=entry.name%></a>
+        <div class="uk-navbar-dropdown">
+          <ul class="uk-nav uk-navbar-dropdown-nav">
+            <% entry.children.forEach(children => { %>
+            <li class="nested-li"><a><%=children%></a></li>
+            <% }) %>
+          </ul>
+        </div>
+      </li>
+      <% } %> <% if (entry.route) { %>
+      <li><a href="<%=entry.route%>"><%=entry.name%></a></li>
+      <% } %> <%});%>
+    </ul>
+  </div>
+
+  <div class="uk-navbar-right">
+    <a href="/">
+      <img src="public/imgs/LOGO.png" alt="شعار فاميلي واي" />
+    </a>
+  </div>
+</nav>

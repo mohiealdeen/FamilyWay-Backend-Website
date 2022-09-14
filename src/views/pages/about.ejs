@@ -1,0 +1,64 @@
+<html>
+  <%- include("../components/head.ejs") %>
+  <body>
+    <div class="uk-container uk-container-large"><%- include("../components/nav.ejs") %></div>
+    <div
+      class="uk-background-cover uk-background-muted uk-height-medium uk-width-large uk-flex uk-flex-center uk-flex-middle"
+      style="
+        background-image: url(../../public/imgs/company.jpg);
+        width: 100%;
+        height: 400px;
+        background-position: center;
+        position: relative;
+        z-index: -1;
+      "
+    >
+      <div class="uk-overlay-default uk-position-cover" style="background: rgba(0, 0, 0, 0.3)"></div>
+    </div>
+    <div class="uk-container uk-container-large">
+      <article class="uk-article">
+        <h1 class="uk-article-title uk-text-primary uk-text-center">
+          <a class="uk-link-reset" href="">تجربة فريدة</a>
+        </h1>
+
+        <p class="uk-article-meta uk-text-center">
+          اختلفت طريقة تسوق المقاضي ودمجت بالمتعة من اللحظة التي تفكر فيها بالتسوق انتهاءً باستلامك مقاضيك سعيدًا كما
+          أردت.
+        </p>
+        <h3 class="uk-heading-line uk-text-center"><span>الفكرة</span></h3>
+        <div><%- include("../svg/brainstorming.ejs") %></div>
+        <p class="uk-text-center">
+          جاءت فكرة مشروع فاميلي واي بعد خبرة استمرت لأكثر من 10 أعوام في عالم التسوق الالكتروني. ومن خلالِ عدة مراحل
+          على مدار عامين قمنا بدراسة أهم المشاكل وايجادِ الحلول. فكان هذا المشروع حلًا ومتجرًا الكترونيًا هو الأول من
+          نوعه لشراء المقاضي المنزلية داخل مدينة الرياض مبدئيًا بنسبة 50% وسيتم التوجه مع نهاية هذا العام لتفعيل الخدمة
+          في باقي مدن المملكة العربية السعودية.
+        </p>
+        <h3 class="uk-heading-line uk-text-center"><span>التجربة</span></h3>
+        <div><%- include("../svg/operation.ejs") %></div>
+        <p class="uk-text-center">
+          تبدأ المغامرة من اللحظة التي يبدأ فيها الفرد باستخدام التطبيق والشراء من بابِ الفضول والتجربة، ليجد جودة
+          المنتجات العالية وطريقة التغليف المميزة والاحترافية وترافقها العلامة التجارية الخاصة فاميلي واي. وهذا يزيدُ
+          الشغف لدى العميل للطلب مرة ثانية. وتظلّ تجربة فاميلي واي أحد أجمل التجارب التي قد يمرّ بها في عالم التسوق
+          الالكتروني.
+        </p>
+        <h3 class="uk-heading-line uk-text-center"><span>الفريق</span></h3>
+        <div><%- include("../svg/leader.ejs") %></div>
+        <p style="text-align: center" class="uk-text-center">
+          يتكونُ فريق فاميلي واي من مجموعة شبابية طموحة تبذل جهدها لتحقيق النجاح على كافة الاصعدة المحلية والاقليمية
+          والدولية في مجال التجارة الالكترونية. يحتوي الفريق على كلّ من الاداريين والمطورين والمصممين وخدمة العملاء
+          وتشغيلين و فري لانسرز مُدربين ومجهزين لاتمام عمليات البيع والشراء والتوصيل كذل
+        </p>
+        <div class="uk-grid-small uk-child-width-auto" uk-grid>
+          <div>
+            <a class="uk-button uk-button-text" href="#">تحميل التطبيق</a>
+          </div>
+          <div>
+            <a class="uk-button uk-button-text" href="/callus">اترك رساله لنا</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    <%- include("../components/footer") %>
+  </body>
+  <%- include("../components/libs.ejs") %>
+</html>

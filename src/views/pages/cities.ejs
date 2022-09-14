@@ -1,0 +1,21 @@
+<html >
+  <%- include("../components/head.ejs") %>
+  <body>
+    <div class="uk-container uk-container-large"><%- include("../components/nav.ejs") %></div>
+    <div class="city-cover">
+      <img src="public/imgs/saudi.jpg" />
+    </div>
+    <div class="uk-container uk-container-large">
+      <div class="content-cities">
+        <h2>المدن المدعومة</h2>
+        <ul class="uk-list uk-list-striped">
+          <% cities.forEach(city => { %>
+          <li><%=city %></li>
+          <% }) %>
+        </ul>
+      </div>
+    </div>
+    <%- include("../components/footer") %>
+  </body>
+  <%- include("../components/libs.ejs") %>
+</html>

@@ -1,0 +1,38 @@
+[
+  {
+      "categories": [
+          "5ffbb27e0acd1a4a10347e56"
+      ],
+      "title": "منتج 1",
+      "details": "لا يوجد نهائي",
+      "price": 4,
+      "barCode": 6223002148999,
+      "variationId": "مياه عاذبه صافي1",
+      "unit": "1",
+      "discount": 3,
+      "discountEnds": "2021-01-22T01:29:39.428Z"
+  },
+  {
+      "categories": [
+          "5ffbb27e0acd1a4a10347e56"
+      ],
+      "title": "منتج 2",
+      "details": "لا يوجد نهائي",
+      "price": 8,
+      "variationId": "مياه عاذبه صافي1",
+      "unit": "2",
+      "discount": 5,
+      "discountEnds": "2021-01-22T01:29:39.428Z"
+  },
+  {
+      "categories": [
+          "5ffbb27e0acd1a4a10347e56"
+      ],
+      "title": "منتج 3",
+      "details": "لا يوجد نهائي",
+      "price": 12,
+      "barCode": 6223002148999,
+      "variationId": "مياه عاذبه صافي1",
+      "unit": "3"
+  }
+]
