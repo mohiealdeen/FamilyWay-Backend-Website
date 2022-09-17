@@ -18,7 +18,8 @@ exports.protect = async (
     req.user = await userModel.findById(decode._id).populate("locations")
     next()
   } catch (error) {
-    res.status(400).json({ message: error.message })
+    // res.status(400).json({ message: error.message })
+    res.status(400).json({ message: error })
   }
 }
 
@@ -45,7 +46,7 @@ exports.authorize = (...roles: Array<string>) => {
     res: Response,
     next: NextFunction
   ) => {
-    console.log(req.user.role)
+    // console.log(req.user.role)
     if (!roles.includes(req.user.role)) {
       return res.status(400).json({
         message: `User Role ${req.user.role} is not authorized to access this route`
