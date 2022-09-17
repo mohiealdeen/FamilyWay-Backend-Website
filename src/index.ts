@@ -1,7 +1,9 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import Database from './Config/database';
+import helmet from 'helmet';
 import cors from 'cors';
+import compression from 'compression';
 import shell from 'shelljs';
 import parentCategoryModel from './model/parentCategoryModel';
 import constantsModel, { Constants } from './model/constantsModel';
@@ -14,6 +16,10 @@ const PORT = process.env.PORT || 5000;
 const VERSION = process.env.VERSION || '1.5.0';
 
 const app = express();
+//* use helmet
+app.use(helmet());
+//* use compression to gzip responses
+app.use(compression());
 app.use(cors());
 app.use(express.json());
 
@@ -119,7 +125,7 @@ const contentOfPolitics = async () => {
       suggestedToUsText: 'حدث خطأ',
       contactUsText: 'حدث خطأ'
     };
-    console.log(error.message);
+    console.log(error);
   }
 };
 contentOfPolitics();
