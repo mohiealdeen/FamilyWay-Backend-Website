@@ -31,6 +31,6 @@ const mailSchema = new Schema(
   }
 );
 
-const mailModel: Model<Mail> = model('Mail', mailSchema);
+const mailModel: Model<Mail> = model<Mail>('Mail', mailSchema);
 
 export default mailModel;

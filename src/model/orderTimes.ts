@@ -47,6 +47,6 @@ orderTimeSchema.post('init', async function (this: OrderTimes) {
   }
 })
 
-const orderTimesModel: Model<OrderTimes> = model('OrderTimes', orderTimeSchema)
+const orderTimesModel: Model<OrderTimes> = model<OrderTimes>('OrderTimes', orderTimeSchema)
 
 export default orderTimesModel

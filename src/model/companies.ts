@@ -16,5 +16,5 @@ const CompanySchema = new Schema({
   }
 });
 
-const companyModel: Model<Companies> = model('Companies', CompanySchema);
+const companyModel: Model<Companies> = model<Companies>('Companies', CompanySchema);
 export default companyModel;

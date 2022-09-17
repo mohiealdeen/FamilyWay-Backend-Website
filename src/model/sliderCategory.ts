@@ -28,7 +28,7 @@ const sliderCategorySchema = new Schema({
   }
 })
 
-const sliderCategoryModel: Model<SliderCategory> = model(
+const sliderCategoryModel: Model<SliderCategory> = model<SliderCategory>(
   'SliderCategory',
   sliderCategorySchema
 )

@@ -24,5 +24,5 @@ const cardOrderSchema = new Schema(
   { timestamps: true }
 );
 
-const cardOrderModel: Model<CardOrder> = model('CardOrder', cardOrderSchema);
+const cardOrderModel: Model<CardOrder> = model<CardOrder>('CardOrder', cardOrderSchema);
 export default cardOrderModel;

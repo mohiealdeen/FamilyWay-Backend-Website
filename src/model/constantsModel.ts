@@ -163,6 +163,6 @@ const constantsSchema = new Schema(
   { timestamps: true }
 );
 
-const constantsModel: Model<Constants> = model('Constants', constantsSchema);
+const constantsModel: Model<Constants> = model<Constants>('Constants', constantsSchema);
 
 export default constantsModel;

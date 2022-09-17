@@ -125,6 +125,6 @@ const couponSchema = new Schema({
   }
 });
 
-const couponModel: Model<Coupon> = model('Coupon', couponSchema);
+const couponModel: Model<Coupon> = model<Coupon>('Coupon', couponSchema);
 
 export default couponModel;

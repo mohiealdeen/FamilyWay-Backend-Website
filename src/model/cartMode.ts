@@ -78,6 +78,6 @@ cartSchema.methods.calcPrice = async function () {
   await this.save()
 }
 
-const cartModel: Model<Cart> = model('Cart', cartSchema)
+const cartModel: Model<Cart> = model<Cart>('Cart', cartSchema)
 
 export default cartModel

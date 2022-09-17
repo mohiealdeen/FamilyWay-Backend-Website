@@ -63,6 +63,6 @@ const AddressSchema = new Schema(
 )
 AddressSchema.plugin(random)
 
-const addressModel: Model<Address> = model('Address', AddressSchema)
+const addressModel: Model<Address> = model<Address>('Address', AddressSchema)
 
 export default addressModel

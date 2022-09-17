@@ -15,6 +15,6 @@ const adViewSchema = new Schema({
   time: { type: Schema.Types.Number }
 });
 
-const adViewModel: Model<AdView> = model('AdView', adViewSchema);
+const adViewModel: Model<AdView> = model<AdView>('AdView', adViewSchema);
 
 export default adViewModel;

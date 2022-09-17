@@ -133,6 +133,6 @@ productSchema.post('init', async function () {
   }
 });
 
-const productModel: Model<Product> = model('Product', productSchema);
+const productModel: Model<Product> = model<Product>('Product', productSchema);
 
 export default productModel;

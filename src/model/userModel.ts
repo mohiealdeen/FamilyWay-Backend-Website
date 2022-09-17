@@ -139,6 +139,6 @@ userSchema.methods.getToken = function () {
   });
 };
 
-const userModel: Model<User> = model('User', userSchema);
+const userModel: Model<User> = model<User>('User', userSchema);
 
 export default userModel;

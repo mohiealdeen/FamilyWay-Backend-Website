@@ -16,6 +16,9 @@ const parentCategorySchema = new Schema(
       type: Schema.Types.String,
       required: true
     },
+    image: {
+      type: Schema.Types.String,
+    },
     sort: {
       type: Schema.Types.Number,
       default: 1
@@ -28,6 +31,6 @@ const parentCategorySchema = new Schema(
   { timestamps: true }
 );
 
-const parentCategoryModel: Model<Category> = model('parentCategory', parentCategorySchema);
+const parentCategoryModel: Model<Category> = model<Category>('parentCategory', parentCategorySchema);
 
 export default parentCategoryModel;

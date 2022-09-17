@@ -32,6 +32,6 @@ favSchema.post('init', async function () {
   console.log(doc)
 })
 
-const favModel: Model<Fav> = model('Fav', favSchema)
+const favModel: Model<Fav> = model<Fav>('Fav', favSchema)
 
 export default favModel

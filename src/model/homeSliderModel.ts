@@ -19,6 +19,6 @@ const homeSliderSchema = new Schema({
   }
 })
 
-const homeSliderModel: Model<HomeSlider> = model('HomeSlider', homeSliderSchema)
+const homeSliderModel: Model<HomeSlider> = model<HomeSlider>('HomeSlider', homeSliderSchema)
 
 export default homeSliderModel

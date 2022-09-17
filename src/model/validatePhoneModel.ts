@@ -28,7 +28,7 @@ const validatePhoneSchema = new Schema({
   }
 })
 
-const validatePhoneModel: Model<ValidatePhone> = model(
+const validatePhoneModel: Model<ValidatePhone> = model<ValidatePhone>(
   'validatePhone',
   validatePhoneSchema
 )

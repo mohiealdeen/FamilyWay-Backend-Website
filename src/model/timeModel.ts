@@ -19,6 +19,6 @@ const timeSchema = new Schema(
   { timestamps: true }
 )
 
-const timeModel: Model<Time> = model('Time', timeSchema)
+const timeModel: Model<Time> = model<Time>('Time', timeSchema)
 
 export default timeModel

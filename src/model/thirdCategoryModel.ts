@@ -32,6 +32,6 @@ const thirdCategorySchema = new Schema(
   { timestamps: true }
 );
 
-const thirdCategoryModel: Model<ThirdCategory> = model('thirdCategory', thirdCategorySchema);
+const thirdCategoryModel: Model<ThirdCategory> = model<ThirdCategory>('thirdCategory', thirdCategorySchema);
 
 export default thirdCategoryModel;

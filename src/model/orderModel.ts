@@ -188,9 +188,12 @@ orderSchema.methods.handleOrder = async function (totalPrice: number, cartItems:
     // save
     await this.save();
   } catch (error) {
-    throw new Error(error.message);
+    // throw new Error(error.message);
+    // const erro: String = error;
+    // throw new Error(erro);
+    console.log(error);
   }
 };
 
-const orderModel: Model<Order> = model('Order', orderSchema);
+const orderModel: Model<Order> = model<Order>('Order', orderSchema);
 export default orderModel;
