@@ -10,7 +10,6 @@ yarn-error.log*
 .next
 .idea
 build/
-.env.backup
 
 # Dependency directories
 node_modules/
