@@ -72,7 +72,8 @@ exports.createAddress = async (
 
     res.status(200).json({ message: 'location is created!!!' })
   } catch (error) {
-    res.status(400).json({ error: error.message })
+    // res.status(400).json({ error: error.message })
+    res.status(400).json({ error: error })
   }
 }
 
@@ -82,7 +83,8 @@ exports.getAddress = async (req: Request & { user: User }, res: Response) => {
     const addresses = await addressModel.find({ user: user._id })
     res.status(200).json({ addresses })
   } catch (error) {
-    res.status(400).json({ error: error.message })
+    // res.status(400).json({ error: error.message })
+    res.status(400).json({ error: error })
   }
 }
 
@@ -103,7 +105,8 @@ exports.deleteAddress = async (
 
     res.status(200).json({ message: 'Deleted!!!' })
   } catch (error) {
-    res.status(400).json({ error: error.message })
+    // res.status(400).json({ error: error.message })
+    res.status(400).json({ error: error })
   }
 }
 
@@ -125,6 +128,7 @@ exports.updateAddressPrim = async (
     )
     res.status(200).json({ message: 'Updated!!!' })
   } catch (error) {
-    res.status(400).json({ error: error.message })
+    // res.status(400).json({ error: error.message })
+    res.status(400).json({ error: error })
   }
 }

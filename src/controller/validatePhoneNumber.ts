@@ -49,7 +49,8 @@ exports.create = async (req: Request, res: Response) => {
     }
   } catch (error) {
     console.log(error);
-    return res.status(500).json(error.message);
+    // return res.status(500).json(error.message);
+    return res.status(500).json(error);
   }
 };
 
@@ -89,7 +90,8 @@ exports.validate = async (req: Request, res: Response) => {
       }
     }
   } catch (error) {
-    return res.status(500).send(error.message);
+    // return res.status(500).send(error.message);
+    return res.status(500).send(error);
   }
 };
 
@@ -119,7 +121,8 @@ exports.changeNumber = async (req: Request & { user: any }, res: Response) => {
 
     res.status(200).json({ user: 'send code to this number', newCode });
   } catch (error) {
-    return res.status(400).send(error.message);
+    // return res.status(400).send(error.message);
+    return res.status(400).send(error);
   }
 };
 
@@ -141,6 +144,7 @@ exports.validateChangeNumber = async (req: Request & { user: User }, res: Respon
 
     res.status(200).json({ user: 'number is changed!!!' });
   } catch (error) {
-    return res.status(400).send(error.message);
+    // return res.status(400).send(error.message);
+    return res.status(400).send(error);
   }
 };

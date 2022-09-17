@@ -18,7 +18,8 @@ exports.createCategory = async (req: Request & { user: User }, res: Response) =>
     });
     res.status(200).json({ message: 'parent Category is Created!!!' });
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    // res.status(400).json({ error: error.message });
+    res.status(400).json({ error: error });
   }
 };
 
@@ -34,7 +35,8 @@ exports.getParentCategory = async (req: Request & { user: User }, res: Response)
     category = await parentCategoryModel.find({ _id: id });
     res.status(200).json({ category });
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    // res.status(400).json({ error: error.message });
+    res.status(400).json({ error: error });
   }
 };
 
@@ -44,7 +46,8 @@ exports.allCategories = async (req: Request & { user: User }, res: Response) => 
     category = await parentCategoryModel.find();
     res.status(200).json({ categories: category });
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    // res.status(400).json({ error: error.message });
+    res.status(400).json({ error: error });
   }
 };
 
@@ -104,7 +107,8 @@ exports.deleteCategory = async (req: Request & { user: User }, res: Response) =>
 
     res.status(200).json({ message: 'deleted!!!' });
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    // res.status(400).json({ error: error.message });
+    res.status(400).json({ error: error });
   }
 };
 
@@ -114,6 +118,7 @@ exports.updateCategory = async (req: Request & { user: User }, res: Response) =>
     await parentCategoryModel.findByIdAndUpdate(id, req.body);
     res.status(200).json({ message: 'updated' });
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    // res.status(400).json({ error: error.message });
+    res.status(400).json({ error: error });
   }
 };

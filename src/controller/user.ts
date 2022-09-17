@@ -11,7 +11,8 @@ exports.userData = async (req: Request & { user: User }, res: Response) => {
     const { user } = req;
     res.status(200).json({ user: user.populate('orders') });
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    // res.status(400).json({ message: error.message });
+    res.status(400).json({ message: error });
   }
 };
 
@@ -51,7 +52,8 @@ exports.getAllUsers = async (req: Request & { user: User }, res: Response) => {
 
     return res.status(200).send({ pagination, users });
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    // res.status(400).json({ message: error.message });
+    res.status(400).json({ message: error });
   }
 };
 
@@ -61,7 +63,8 @@ exports.getUser = async (req: Request & { user: User }, res: Response) => {
     const user = await userModel.findOne({ _id: id }).populate('orders');
     return res.status(200).send(user);
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    // res.status(400).json({ message: error.message });
+    res.status(400).json({ message: error });
   }
 };
 
@@ -77,7 +80,8 @@ exports.changeName = async (req: Request & { user: User }, res: Response) => {
 
     res.status(200).json({ getUser });
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    // res.status(400).json({ message: error.message });
+    res.status(400).json({ message: error });
   }
 };
 
@@ -87,7 +91,8 @@ exports.editUser = async (req: Request & { user: User }, res: Response) => {
     const users = await userModel.findOneAndUpdate({ phone }, req.body);
     res.status(200).send('Updated');
   } catch (err) {
-    res.status(400).json({ message: err.message });
+    // res.status(400).json({ message: err.message });
+    res.status(400).json({ message: err });
   }
 };
 
@@ -106,7 +111,8 @@ exports.fillForm = async (req: Request & { user: User }, res: Response) => {
 
     res.status(200).send('Updated');
   } catch (err) {
-    res.status(400).json({ message: err.message });
+    // res.status(400).json({ message: err.message });
+    res.status(400).json({ message: err });
   }
 };
 
@@ -134,7 +140,8 @@ exports.applyFriend = async (req: Request & { user: User }, res: Response) => {
 
     res.status(200).send('HappyHacking!!');
   } catch (err) {
-    res.status(400).json({ message: err.message });
+    // res.status(400).json({ message: err.message });
+    res.status(400).json({ message: err });
   }
 };
 
@@ -167,7 +174,8 @@ exports.createXLSFile = async (req: Request & { user: User }, res: Response) => 
 
     res.status(200).send('Created!!');
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    // res.status(400).json({ message: error.message });
+    res.status(400).json({ message: error });
   }
 };
 
@@ -184,7 +192,8 @@ exports.getXLSFiles = async (req: Request & { user: User }, res: Response) => {
       return res.status(200).send(arrayOfImages);
     });
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    // res.status(400).json({ message: error.message });
+    res.status(400).json({ message: error });
   }
 };
 
@@ -194,6 +203,7 @@ exports.deleteFileXLS = async (req: Request & { user: User }, res: Response) => 
     fs.unlinkSync(`${__dirname}/../upload/excelFilesForUsers/${name}`);
     return res.status(200).send("removed");
   } catch (err) {
-    res.status(400).json({ message: err.message });
+    // res.status(400).json({ message: err.message });
+    res.status(400).json({ message: err });
   }
 };
