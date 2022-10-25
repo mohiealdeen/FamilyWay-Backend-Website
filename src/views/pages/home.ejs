@@ -150,7 +150,7 @@
   document.querySelectorAll('download_section_button').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
           e.preventDefault();
-          document.querySelector(this.getAttribute('download_section_button')).scrollIntoView({
+          document.getElementById('download_section').scrollIntoView({
               behavior: 'smooth'
           });
       });
